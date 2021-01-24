@@ -11,12 +11,15 @@ from multiprocessing import Process, Pipe
 import argparse
 
 
-from .__init__ import __version__
-from RASPA2.output_parser import parse
+from __init__ import __version__
+from output_parser import parse
 
-raspa_dir = os.path.dirname(os.path.realpath(__file__))
-libraspa_dir = os.path.join(raspa_dir, "simulations/lib")
-libraspa_file = next(f for f in os.listdir(libraspa_dir) if "libraspa" in f)
+#raspa_dir = os.path.dirname(os.path.realpath(__file__))
+raspa_dir = '/Users/leopold/Applications/miniconda3/'
+#libraspa_dir = os.path.join(raspa_dir, "simulations/lib")
+#libraspa_file = next(f for f in os.listdir(libraspa_dir) if "libraspa" in f)
+libraspa_dir = '/Users/leopold/Applications/miniconda3/lib'
+libraspa_file = '/Users/leopold/Applications/miniconda3/lib/libraspa2.dylib'
 
 try:
     import pybel
